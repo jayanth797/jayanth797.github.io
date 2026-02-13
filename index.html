@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Jayanth P | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -17,6 +18,7 @@
 body{
     background:linear-gradient(135deg,#f3f4f6,#e5e7eb);
     color:#111827;
+    overflow-x:hidden;
 }
 
 /* HERO SECTION */
@@ -26,64 +28,92 @@ body{
     justify-content:space-between;
     padding:100px 10%;
     min-height:100vh;
+    animation: fadeIn 1.2s ease-in;
 }
 
 .hero-left{
-    max-width:550px;
+    max-width:600px;
 }
 
 .hero-left h1{
-    font-size:52px;
+    font-size:54px;
     margin-bottom:20px;
 }
 
 .hero-left span{
-    color:#7c3aed;
+    color:#6366f1;
 }
 
 .hero-left p{
-    color:#6b7280;
-    margin-bottom:30px;
+    color:#4b5563;
+    margin-bottom:35px;
     line-height:1.6;
     font-size:18px;
 }
 
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
 .btn{
-    background:#7c3aed;
-    color:white;
     padding:14px 28px;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
     font-weight:500;
-    transition:0.3s;
+    transition:0.3s ease;
     display:inline-block;
 }
 
-.btn:hover{
-    background:#6d28d9;
+/* GitHub Button */
+.btn-primary{
+    background:#6366f1;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#4f46e5;
+}
+
+/* LinkedIn Button */
+.btn-outline{
+    border:2px solid #6366f1;
+    color:#6366f1;
+}
+
+.btn-outline:hover{
+    background:#6366f1;
+    color:white;
 }
 
 /* IMAGE CARD */
 .hero-right{
+    padding:35px;
+    border-radius:35px;
     background:linear-gradient(135deg,#ede9fe,#f5f3ff);
-    padding:30px;
-    border-radius:30px;
-    box-shadow:0 25px 80px rgba(124,58,237,0.15);
+    box-shadow:0 30px 90px rgba(99,102,241,0.18);
 }
 
 .hero-right img{
-    width:520px; /* Bigger image */
-    border-radius:25px;
-    box-shadow:0 30px 60px rgba(0,0,0,0.18);
-    animation: float 6s ease-in-out infinite;
+    width:560px;   /* BIGGER IMAGE */
+    border-radius:30px;
+    box-shadow:0 30px 70px rgba(0,0,0,0.18);
     display:block;
+    animation: floatImage 5.5s ease-in-out infinite;
 }
 
-/* Floating animation */
-@keyframes float{
+/* FLOAT ANIMATION */
+@keyframes floatImage{
     0%{ transform: translateY(0px); }
-    50%{ transform: translateY(-18px); }
+    50%{ transform: translateY(-22px); }
     100%{ transform: translateY(0px); }
+}
+
+/* FADE IN */
+@keyframes fadeIn{
+    from{ opacity:0; transform: translateY(20px); }
+    to{ opacity:1; transform: translateY(0); }
 }
 
 /* RESPONSIVE */
@@ -100,6 +130,10 @@ body{
     .hero-right img{
         width:350px;
     }
+
+    .buttons{
+        justify-content:center;
+    }
 }
 </style>
 </head>
@@ -107,18 +141,24 @@ body{
 <body>
 
 <section class="hero">
+
     <div class="hero-left">
         <h1>Hello, I’m <span>Jayanth P</span></h1>
         <p>
             Machine Learning and Backend Engineer focused on building scalable,
             production-ready AI systems using Python and Flask.
         </p>
-        <a href="https://github.com/jayanth797" class="btn">View GitHub</a>
+
+        <div class="buttons">
+            <a href="https://github.com/jayanth797" target="_blank" class="btn btn-primary">GitHub</a>
+            <a href="https://www.linkedin.com/in/jayan6767/" target="_blank" class="btn btn-outline">LinkedIn</a>
+        </div>
     </div>
 
     <div class="hero-right">
         <img src="profile.png" alt="Jayanth">
     </div>
+
 </section>
 
 </body>
