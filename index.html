@@ -20,7 +20,6 @@ body{
     color:#111827;
 }
 
-/* HERO */
 .hero{
     display:flex;
     align-items:center;
@@ -45,7 +44,7 @@ body{
 .hero-left p{
     color:#4b5563;
     margin-bottom:35px;
-    line-height:1.6;
+    line-height:1.7;
     font-size:18px;
 }
 
@@ -53,6 +52,7 @@ body{
 .buttons{
     display:flex;
     gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -84,12 +84,22 @@ body{
     color:white;
 }
 
+/* Resume Button */
+.btn-resume{
+    background:#111827;
+    color:white;
+}
+
+.btn-resume:hover{
+    background:#000000;
+}
+
 /* IMAGE CARD */
 .hero-right{
     padding:35px;
     border-radius:35px;
     background:white;
-    border:4px solid #6366f1;   /* NICE BORDER */
+    border:4px solid #6366f1;
     box-shadow:0 35px 90px rgba(99,102,241,0.18);
 }
 
@@ -100,14 +110,12 @@ body{
     animation: floatImage 5.5s ease-in-out infinite;
 }
 
-/* FLOAT */
 @keyframes floatImage{
     0%{ transform: translateY(0px); }
     50%{ transform: translateY(-22px); }
     100%{ transform: translateY(0px); }
 }
 
-/* RESPONSIVE */
 @media(max-width:1000px){
     .hero{
         flex-direction:column;
@@ -135,14 +143,17 @@ body{
 
     <div class="hero-left">
         <h1>Hello, I’m <span>Jayanth P</span></h1>
+
         <p>
-            Machine Learning and Backend Engineer focused on building scalable,
-            production-ready AI systems using Python and Flask.
+            Machine Learning & Backend Engineer specializing in designing scalable, 
+            high-performance systems and intelligent applications built with Python 
+            and modern AI frameworks.
         </p>
 
         <div class="buttons">
             <a href="https://github.com/jayanth797" target="_blank" class="btn btn-primary">GitHub</a>
             <a href="https://www.linkedin.com/in/jayan6767/" target="_blank" class="btn btn-outline">LinkedIn</a>
+            <a href="jayanthp.pdf" download class="btn btn-resume">Download Resume</a>
         </div>
     </div>
 
