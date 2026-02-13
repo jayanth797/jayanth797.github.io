@@ -19,58 +19,13 @@ body{
     color:#111827;
 }
 
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:600;
-}
-
-.logo-circle{
-    width:34px;
-    height:34px;
-    background:#7c3aed;
-    border-radius:50%;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:600;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#374151;
-    font-weight:500;
-}
-
-nav a:hover{
-    color:#7c3aed;
-}
-
 /* HERO SECTION */
 .hero{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:90px 8%;
-    min-height:85vh;
+    padding:100px 10%;
+    min-height:100vh;
 }
 
 .hero-left{
@@ -78,7 +33,7 @@ nav a:hover{
 }
 
 .hero-left h1{
-    font-size:48px;
+    font-size:52px;
     margin-bottom:20px;
 }
 
@@ -90,16 +45,18 @@ nav a:hover{
     color:#6b7280;
     margin-bottom:30px;
     line-height:1.6;
+    font-size:18px;
 }
 
 .btn{
     background:#7c3aed;
     color:white;
-    padding:12px 26px;
+    padding:14px 28px;
     border-radius:6px;
     text-decoration:none;
     font-weight:500;
     transition:0.3s;
+    display:inline-block;
 }
 
 .btn:hover{
@@ -109,61 +66,39 @@ nav a:hover{
 /* IMAGE CARD */
 .hero-right{
     background:linear-gradient(135deg,#ede9fe,#f5f3ff);
-    padding:25px;
-    border-radius:25px;
-    box-shadow:0 20px 60px rgba(124,58,237,0.15);
+    padding:30px;
+    border-radius:30px;
+    box-shadow:0 25px 80px rgba(124,58,237,0.15);
 }
 
 .hero-right img{
-    width:450px;
-    border-radius:20px;
-    box-shadow:0 25px 50px rgba(0,0,0,0.15);
+    width:520px; /* Bigger image */
+    border-radius:25px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.18);
     animation: float 6s ease-in-out infinite;
+    display:block;
 }
 
 /* Floating animation */
 @keyframes float{
     0%{ transform: translateY(0px); }
-    50%{ transform: translateY(-12px); }
+    50%{ transform: translateY(-18px); }
     100%{ transform: translateY(0px); }
 }
 
-/* STATS SECTION */
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:90px;
-    padding:45px;
-    background:white;
-    box-shadow:0 -2px 10px rgba(0,0,0,0.05);
-}
-
-.stat{
-    text-align:center;
-}
-
-.stat h3{
-    font-size:24px;
-    color:#111827;
-    margin-bottom:6px;
-}
-
-.stat p{
-    color:#6b7280;
-    font-size:14px;
-}
-
-@media(max-width:900px){
+/* RESPONSIVE */
+@media(max-width:1000px){
     .hero{
         flex-direction:column;
         text-align:center;
     }
-    .hero-right img{
-        width:320px;
+
+    .hero-right{
+        margin-top:50px;
     }
-    .stats{
-        flex-direction:column;
-        gap:25px;
+
+    .hero-right img{
+        width:350px;
     }
 }
 </style>
@@ -171,47 +106,18 @@ nav a:hover{
 
 <body>
 
-<nav>
-    <div class="logo">
-        <div class="logo-circle">J</div>
-        Jayanth
-    </div>
-
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
 <section class="hero">
     <div class="hero-left">
         <h1>Hello, I’m <span>Jayanth P</span></h1>
         <p>
-            Machine Learning and Backend Engineer focused on building scalable AI-driven systems 
-            using Python, Flask, and modern ML frameworks.
+            Machine Learning and Backend Engineer focused on building scalable,
+            production-ready AI systems using Python and Flask.
         </p>
-        <a href="https://github.com/jayanth797" class="btn">View Projects</a>
+        <a href="https://github.com/jayanth797" class="btn">View GitHub</a>
     </div>
 
     <div class="hero-right">
         <img src="profile.png" alt="Jayanth">
-    </div>
-</section>
-
-<section class="stats">
-    <div class="stat">
-        <h3>4+</h3>
-        <p>Major Projects</p>
-    </div>
-    <div class="stat">
-        <h3>ML & AI</h3>
-        <p>Specialization</p>
-    </div>
-    <div class="stat">
-        <h3>Backend</h3>
-        <p>System Development</p>
     </div>
 </section>
 
