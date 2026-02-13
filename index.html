@@ -26,6 +26,7 @@ nav{
     align-items:center;
     padding:20px 8%;
     background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo{
@@ -36,8 +37,8 @@ nav{
 }
 
 .logo-circle{
-    width:32px;
-    height:32px;
+    width:34px;
+    height:34px;
     background:#7c3aed;
     border-radius:50%;
     color:white;
@@ -68,8 +69,8 @@ nav a:hover{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:80px 8%;
-    min-height:80vh;
+    padding:90px 8%;
+    min-height:85vh;
 }
 
 .hero-left{
@@ -77,7 +78,7 @@ nav a:hover{
 }
 
 .hero-left h1{
-    font-size:46px;
+    font-size:48px;
     margin-bottom:20px;
 }
 
@@ -87,17 +88,18 @@ nav a:hover{
 
 .hero-left p{
     color:#6b7280;
-    margin-bottom:25px;
+    margin-bottom:30px;
     line-height:1.6;
 }
 
 .btn{
     background:#7c3aed;
     color:white;
-    padding:12px 24px;
+    padding:12px 26px;
     border-radius:6px;
     text-decoration:none;
     font-weight:500;
+    transition:0.3s;
 }
 
 .btn:hover{
@@ -107,22 +109,33 @@ nav a:hover{
 /* IMAGE CARD */
 .hero-right{
     background:linear-gradient(135deg,#ede9fe,#f5f3ff);
-    padding:20px;
-    border-radius:20px;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 20px 60px rgba(124,58,237,0.15);
 }
 
 .hero-right img{
-    width:380px;
-    border-radius:15px;
+    width:450px;
+    border-radius:20px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.15);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float{
+    0%{ transform: translateY(0px); }
+    50%{ transform: translateY(-12px); }
+    100%{ transform: translateY(0px); }
 }
 
 /* STATS SECTION */
 .stats{
     display:flex;
     justify-content:center;
-    gap:80px;
-    padding:40px;
+    gap:90px;
+    padding:45px;
     background:white;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.05);
 }
 
 .stat{
@@ -130,8 +143,9 @@ nav a:hover{
 }
 
 .stat h3{
-    font-size:22px;
+    font-size:24px;
     color:#111827;
+    margin-bottom:6px;
 }
 
 .stat p{
@@ -145,11 +159,11 @@ nav a:hover{
         text-align:center;
     }
     .hero-right img{
-        width:280px;
+        width:320px;
     }
     .stats{
         flex-direction:column;
-        gap:20px;
+        gap:25px;
     }
 }
 </style>
@@ -175,8 +189,8 @@ nav a:hover{
     <div class="hero-left">
         <h1>Hello, I’m <span>Jayanth P</span></h1>
         <p>
-            I’m a Machine Learning and Backend Engineer focused on building
-            scalable AI-driven applications and production-ready systems.
+            Machine Learning and Backend Engineer focused on building scalable AI-driven systems 
+            using Python, Flask, and modern ML frameworks.
         </p>
         <a href="https://github.com/jayanth797" class="btn">View Projects</a>
     </div>
