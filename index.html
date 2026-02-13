@@ -2,265 +2,204 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Jayanth P | Machine Learning & Backend Engineer</title>
+<title>Jayanth P | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
 }
 
-body {
-    background: linear-gradient(145deg, #0f172a, #111827);
-    color: #e5e7eb;
+body{
+    background:linear-gradient(135deg,#f3f4f6,#e5e7eb);
+    color:#111827;
 }
 
-/* Glass effect */
-.glass {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
 }
 
-/* Header */
-header {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
 }
 
-header h1 {
-    font-size: 52px;
-    font-weight: 700;
+.logo-circle{
+    width:32px;
+    height:32px;
+    background:#7c3aed;
+    border-radius:50%;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
 }
 
-.typing {
-    margin-top: 12px;
-    font-size: 20px;
-    color: #60a5fa;
-    height: 28px;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
 }
 
-.btn {
-    margin-top: 20px;
-    padding: 12px 26px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    border: 1px solid #60a5fa;
-    color: #60a5fa;
-    transition: 0.3s;
+nav a{
+    text-decoration:none;
+    color:#374151;
+    font-weight:500;
 }
 
-.btn:hover {
-    background: #60a5fa;
-    color: #0f172a;
+nav a:hover{
+    color:#7c3aed;
 }
 
-section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
+/* HERO SECTION */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    min-height:80vh;
 }
 
-h2 {
-    font-size: 30px;
-    margin-bottom: 35px;
-    text-align: center;
-    font-weight: 600;
+.hero-left{
+    max-width:550px;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.hero-left h1{
+    font-size:46px;
+    margin-bottom:20px;
 }
 
-.card {
-    padding: 25px;
-    transition: 0.3s;
+.hero-left span{
+    color:#7c3aed;
 }
 
-.card:hover {
-    transform: translateY(-6px);
+.hero-left p{
+    color:#6b7280;
+    margin-bottom:25px;
+    line-height:1.6;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    font-weight: 600;
+.btn{
+    background:#7c3aed;
+    color:white;
+    padding:12px 24px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
 }
 
-.card p {
-    font-size: 14px;
-    color: #9ca3af;
+.btn:hover{
+    background:#6d28d9;
 }
 
-.project-links {
-    margin-top: 15px;
+/* IMAGE CARD */
+.hero-right{
+    background:linear-gradient(135deg,#ede9fe,#f5f3ff);
+    padding:20px;
+    border-radius:20px;
 }
 
-.project-links a {
-    font-size: 13px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid #374151;
-    color: #d1d5db;
-    text-decoration: none;
-    margin-right: 8px;
+.hero-right img{
+    width:380px;
+    border-radius:15px;
 }
 
-.project-links a:hover {
-    border-color: #60a5fa;
-    color: #60a5fa;
+/* STATS SECTION */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:40px;
+    background:white;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+.stat{
+    text-align:center;
 }
 
-.skill {
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: #1f2937;
-    font-size: 14px;
+.stat h3{
+    font-size:22px;
+    color:#111827;
 }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #9ca3af;
+.stat p{
+    color:#6b7280;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-right img{
+        width:280px;
+    }
+    .stats{
+        flex-direction:column;
+        gap:20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Jayanth P</h1>
-    <div class="typing" id="typing"></div>
-    <a href="https://github.com/jayanth797" class="btn">GitHub</a>
-    <a href="jayanthp.pdf" class="btn">Download Resume</a>
-</header>
+<nav>
+    <div class="logo">
+        <div class="logo-circle">J</div>
+        Jayanth
+    </div>
 
-<section>
-<h2>About</h2>
-<div class="glass card">
-<p style="text-align:center; max-width:800px; margin:auto;">
-Computer Science undergraduate focused on building scalable backend systems and machine learning applications.
-I specialize in solving real-world problems using Python, Flask, and modern ML frameworks while maintaining clean architecture and deployment discipline.
-</p>
-</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-left">
+        <h1>Hello, I’m <span>Jayanth P</span></h1>
+        <p>
+            I’m a Machine Learning and Backend Engineer focused on building
+            scalable AI-driven applications and production-ready systems.
+        </p>
+        <a href="https://github.com/jayanth797" class="btn">View Projects</a>
+    </div>
+
+    <div class="hero-right">
+        <img src="profile.png" alt="Jayanth">
+    </div>
 </section>
 
-<section>
-<h2>Projects</h2>
-<div class="projects">
-
-<div class="glass card">
-<h3>Customer Churn Prediction</h3>
-<p>Built ML pipeline prioritizing recall (~80%) to predict high-risk customers using Logistic Regression and Random Forest.</p>
-<div class="project-links">
-<a href="https://github.com/jayanth797">GitHub</a>
-</div>
-</div>
-
-<div class="glass card">
-<h3>Online Recruitment Fraud Detection</h3>
-<p>Developed BERT-based NLP classification system deployed with Flask for real-time fraud detection.</p>
-<div class="project-links">
-<a href="https://github.com/jayanth797">GitHub</a>
-</div>
-</div>
-
-<div class="glass card">
-<h3>AI Story Generator</h3>
-<p>Emotion-driven adaptive storytelling engine integrating LLM with custom classification model.</p>
-<div class="project-links">
-<a href="https://github.com/jayanth797">GitHub</a>
-</div>
-</div>
-
-<div class="glass card">
-<h3>Mynull Mobile App</h3>
-<p>Cross-platform e-commerce mobile application built using React Native and Expo.</p>
-<div class="project-links">
-<a href="https://github.com/jayanth797">GitHub</a>
-</div>
-</div>
-
-</div>
+<section class="stats">
+    <div class="stat">
+        <h3>4+</h3>
+        <p>Major Projects</p>
+    </div>
+    <div class="stat">
+        <h3>ML & AI</h3>
+        <p>Specialization</p>
+    </div>
+    <div class="stat">
+        <h3>Backend</h3>
+        <p>System Development</p>
+    </div>
 </section>
-
-<section>
-<h2>Technical Skills</h2>
-<div class="skills">
-<span class="skill">Python</span>
-<span class="skill">Flask</span>
-<span class="skill">SQL</span>
-<span class="skill">MySQL</span>
-<span class="skill">MongoDB</span>
-<span class="skill">BERT</span>
-<span class="skill">AWS</span>
-<span class="skill">Docker</span>
-<span class="skill">Git</span>
-</div>
-</section>
-
-<section>
-<h2>Contact</h2>
-<p style="text-align:center;">
-Email: jayanthpjayanthp055@gmail.com <br>
-LinkedIn: <a href="https://www.linkedin.com/in/jayan6767/" style="color:#60a5fa;">linkedin.com/in/jayan6767</a>
-</p>
-</section>
-
-<footer>
-© 2026 Jayanth P | Professional Portfolio
-</footer>
-
-<script>
-const text = [
-"Machine Learning Engineer",
-"Backend Developer",
-"Flask API Builder",
-"Data-Driven Problem Solver"
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type(){
-    if(count === text.length){
-        count = 0;
-    }
-    currentText = text[count];
-    letter = currentText.slice(0, ++index);
-
-    document.getElementById("typing").textContent = letter;
-    if(letter.length === currentText.length){
-        count++;
-        index = 0;
-        setTimeout(type, 1200);
-    } else {
-        setTimeout(type, 70);
-    }
-})();
-</script>
 
 </body>
 </html>
